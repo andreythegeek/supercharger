@@ -46,6 +46,12 @@
 
 (package-install 'use-package)
 
+;; Zenburn theme is low on contrast and provide weird but cool colors:
+
+(use-package zenburn-theme
+  :ensure t
+  :config (load-theme 'zenburn t))
+
 ;; Load settings made with Easy Customization Interface:
 
 (when (file-exists-p custom-file)
