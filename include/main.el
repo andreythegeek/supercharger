@@ -34,7 +34,8 @@
 
 (add-to-list 'package-archives (cons "melpa" "https://melpa.org/packages/") t)
 
-(package-refresh-contents)
+(unless package-archive-contents
+  (package-refresh-contents))
 
 ;; Install use-package to handle dependencies:
 
