@@ -6,7 +6,7 @@
 
 (setq custom-file (expand-file-name custom-file-name user-emacs-directory))
 
-;; Turn off GUI features:
+;; Turn off some bells and whistles:
 
 (when (featurep 'menu-bar)
   (menu-bar-mode -1))
@@ -16,6 +16,11 @@
 
 (when (featurep 'scroll-bar)
   (scroll-bar-mode -1))
+
+(setq inhibit-startup-echo-area-message t)
+(setq inhibit-startup-message t)
+(setq inhibit-startup-screen t)
+(setq ring-bell-function 'ignore)
 
 ;; Make sure default encoding is UTF-8:
 
