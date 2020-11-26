@@ -17,6 +17,13 @@
 (when (featurep 'scroll-bar)
   (scroll-bar-mode -1))
 
+;; Make sure default encoding is UTF-8:
+
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+
 ;; Load settings made with Easy Customization Interface:
 
 (when (file-exists-p custom-file)
