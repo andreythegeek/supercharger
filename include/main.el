@@ -30,6 +30,8 @@
 
 (setq package-user-dir (expand-file-name package-user-dir-name user-emacs-directory))
 
+(package-initialize)
+
 (add-to-list 'package-archives (cons "melpa" "https://melpa.org/packages/") t)
 
 (package-refresh-contents)
