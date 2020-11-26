@@ -24,6 +24,20 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 
+;; Set up package manager:
+
+(defconst package-user-dir-name "vendor")
+
+(setq package-user-dir (expand-file-name package-user-dir-name user-emacs-directory))
+
+(add-to-list 'package-archives (cons "melpa" "https://melpa.org/packages/") t)
+
+(package-refresh-contents)
+
+;; Install use-package to handle dependencies:
+
+(package-install 'use-package)
+
 ;; Load settings made with Easy Customization Interface:
 
 (when (file-exists-p custom-file)
