@@ -52,6 +52,12 @@
   :ensure t
   :config (load-theme 'zenburn t))
 
+;; Install Magit to handle VC operations:
+
+(use-package magit
+  :ensure t
+  :bind ("C-c C-s" . magit-status))
+
 ;; Load settings made with Easy Customization Interface:
 
 (when (file-exists-p custom-file)
