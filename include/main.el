@@ -29,11 +29,13 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 
-;; Show line numbers for code:
+;; Show line numbers and matching parens:
 
 (add-hook 'prog-mode-hook
 	  (lambda ()
 	    (display-line-numbers-mode t)))
+
+(show-paren-mode t)
 
 ;; Set up package manager:
 
