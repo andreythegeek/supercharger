@@ -84,6 +84,17 @@
 (use-package yaml-mode
   :ensure t)
 
+;; Just a few packages to handle Git-specific files:
+
+(use-package gitattributes-mode
+  :ensure t)
+
+(use-package gitconfig-mode
+  :ensure t)
+
+(use-package gitignore-mode
+  :ensure t)
+
 ;; Emulate Vim:
 
 (use-package evil
