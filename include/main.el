@@ -56,6 +56,10 @@
 	    (set (make-local-variable 'sgml-basic-offset) 1)
 	    (sgml-guess-indent)))
 
+;; Always put a newline in the end of the file:
+
+(setq-default require-final-newline t)
+
 ;; Set up package manager:
 
 (defconst package-user-dir-name "vendor")
