@@ -58,6 +58,11 @@
   :ensure t
   :config (load-theme 'zenburn t))
 
+;; Add support for YAML:
+
+(use-package yaml-mode
+  :ensure t)
+
 ;; Emulate Vim:
 
 (use-package evil
