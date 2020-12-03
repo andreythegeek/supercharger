@@ -37,6 +37,25 @@
 
 (show-paren-mode t)
 
+;; Make sure to use spaces, not tabs:
+
+(setq-default indent-tabs-mode nil)
+
+(defconst indent-size 4)
+
+(setq-default tab-width indent-size
+	          c-basic-offset indent-size)
+
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (c-toggle-auto-state t)
+	    (c-toggle-hungry-state t)))
+
+(add-hook 'sgml-mode-hook
+	  (lambda ()
+	    (set (make-local-variable 'sgml-basic-offset) 1)
+	    (sgml-guess-indent)))
+
 ;; Set up package manager:
 
 (defconst package-user-dir-name "vendor")
