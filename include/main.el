@@ -29,6 +29,12 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 
+;; Show line numbers for code:
+
+(add-hook 'prog-mode-hook
+	  (lambda ()
+	    (display-line-numbers-mode t)))
+
 ;; Set up package manager:
 
 (defconst package-user-dir-name "vendor")
@@ -51,6 +57,12 @@
 (use-package zenburn-theme
   :ensure t
   :config (load-theme 'zenburn t))
+
+;; Emulate Vim:
+
+(use-package evil
+  :ensure t
+  :config (evil-mode t))
 
 ;; Install Magit to handle VC operations:
 
