@@ -76,6 +76,15 @@
 (setq make-backup-files nil)
 (setq create-lockfiles nil)
 
+;; Use Ido-mode for basic navigation:
+
+(require 'ido)
+
+(setq ido-enable-flex-matching t)
+
+(ido-mode t)
+(ido-everywhere t)
+
 ;; Set up package manager:
 
 (defconst package-user-dir-name "vendor")
