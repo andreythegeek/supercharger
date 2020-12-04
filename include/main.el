@@ -86,6 +86,18 @@
 (ido-mode t)
 (ido-everywhere t)
 
+;; Omit unnecessary dialogs:
+
+(require 'dired)
+
+(setq dired-recursive-copies 'always)
+(setq dired-recursive-deletes 'always)
+
+(add-hook 'comint-exec-hook
+          (lambda ()
+            (let ((process (get-buffer-process (current-buffer))))
+              (set-process-query-on-exit-flag process nil))))
+
 ;; Set up package manager:
 
 (defconst package-user-dir-name "vendor")
