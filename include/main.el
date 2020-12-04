@@ -143,6 +143,9 @@
   :ensure t
   :config (evil-mode t))
 
+(use-package evil-nerd-commenter
+  :ensure t)
+
 ;; Install Magit to handle VC operations:
 
 (use-package magit
@@ -159,7 +162,19 @@
             (my-leader-key
              :states 'motion
              :keymaps 'override
-             "s" 'magit-status)))
+             "SPC" 'execute-extended-command
+             "s" 'magit-status)
+            (general-create-definer my-commenter-leader-key :prefix "SPC c")
+            (my-commenter-leader-key
+             :states 'motion
+             :keymaps 'override
+             "c" 'evilnc-copy-and-comment-lines
+             "i" 'evilnc-comment-or-uncomment-lines
+             "l" 'evilnc-quick-comment-or-uncomment-to-the-line
+             "p" 'evilnc-comment-or-uncomment-paragraphs
+             "r" 'comment-or-uncomment-region
+             "v" 'evilnc-toggle-invert-comment-line-by-line
+             "." 'evilnc-copy-and-comment-operator)))
 
 ;; Load settings made with Easy Customization Interface:
 
