@@ -71,6 +71,11 @@
 (setq scroll-conservatively 10000)
 (setq scroll-preserve-screen-position t)
 
+;; I'm brave enough not to rely on built-in backups:
+
+(setq make-backup-files nil)
+(setq create-lockfiles nil)
+
 ;; Set up package manager:
 
 (defconst package-user-dir-name "vendor")
