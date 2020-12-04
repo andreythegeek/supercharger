@@ -147,7 +147,7 @@
 
 (use-package magit
   :ensure t
-  :init (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
+  :custom (magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
   :bind ("C-c C-s" . magit-status))
 
 ;; Load settings made with Easy Customization Interface:
