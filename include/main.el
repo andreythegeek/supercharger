@@ -56,6 +56,10 @@
 	    (set (make-local-variable 'sgml-basic-offset) 1)
 	    (sgml-guess-indent)))
 
+;; Operate on visual lines, not logical:
+
+(global-visual-line-mode t)
+
 ;; Always put a newline in the end of the file:
 
 (setq-default require-final-newline t)
