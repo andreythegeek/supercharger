@@ -64,6 +64,13 @@
 
 (setq-default require-final-newline t)
 
+;; Do not jump to the center of the screen when cursor reach the bottom:
+
+(setq scroll-margin 3)
+(setq scroll-step 1)
+(setq scroll-conservatively 10000)
+(setq scroll-preserve-screen-position t)
+
 ;; Set up package manager:
 
 (defconst package-user-dir-name "vendor")
