@@ -147,8 +147,19 @@
 
 (use-package magit
   :ensure t
-  :custom (magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
-  :bind ("C-c C-s" . magit-status))
+  :custom (magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1))
+
+;; Add mode for Vim Leader style keybindings:
+
+(use-package general
+  :ensure t
+  :after evil
+  :config (progn
+            (general-create-definer my-leader-key :prefix "SPC")
+            (my-leader-key
+             :states 'normal
+             :keymaps 'override
+             "s" 'magit-status)))
 
 ;; Load settings made with Easy Customization Interface:
 
