@@ -73,6 +73,7 @@
 
 ;; I'm brave enough not to rely on built-in backups:
 
+(setq auto-save-default nil)
 (setq make-backup-files nil)
 (setq create-lockfiles nil)
 
