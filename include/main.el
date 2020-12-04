@@ -157,7 +157,7 @@
   :config (progn
             (general-create-definer my-leader-key :prefix "SPC")
             (my-leader-key
-             :states 'normal
+             :states 'motion
              :keymaps 'override
              "s" 'magit-status)))
 
