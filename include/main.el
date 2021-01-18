@@ -168,12 +168,9 @@
             (my-commenter-leader-key
              :states 'motion
              :keymaps 'override
-             "." 'evilnc-copy-and-comment-operator
              "c" 'evilnc-copy-and-comment-lines
              "i" 'evilnc-comment-or-uncomment-lines
-             "l" 'evilnc-quick-comment-or-uncomment-to-the-line
              "p" 'evilnc-comment-or-uncomment-paragraphs
-             "r" 'comment-or-uncomment-region
              "v" 'evilnc-toggle-invert-comment-line-by-line)))
 
 ;; Load settings made with Easy Customization Interface:
