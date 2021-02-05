@@ -115,12 +115,6 @@
 
 (package-install 'use-package)
 
-;; Zenburn theme is low on contrast and provide weird but cool colors:
-
-(use-package zenburn-theme
-  :ensure t
-  :config (load-theme 'zenburn t))
-
 ;; Add support for YAML:
 
 (use-package yaml-mode
