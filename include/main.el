@@ -144,7 +144,8 @@
 
 (use-package magit
   :ensure t
-  :custom (magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1))
+  :custom (magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
+  :bind ("C-c C-s" . magit-status))
 
 ;; Add mode for Vim Leader style keybindings:
 
