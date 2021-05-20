@@ -142,36 +142,12 @@
   :ensure t
   :config (evil-mode t))
 
-(use-package evil-nerd-commenter
-  :ensure t)
-
 ;; Install Magit to handle VC operations:
 
 (use-package magit
   :ensure t
   :custom (magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
   :bind ("C-c C-s" . magit-status))
-
-;; Add mode for Vim Leader style keybindings:
-
-(use-package general
-  :ensure t
-  :after evil
-  :config (progn
-            (general-create-definer my-leader-key :prefix "SPC")
-            (my-leader-key
-             :states 'motion
-             :keymaps 'override
-             "SPC" 'execute-extended-command
-             "s" 'magit-status)
-            (general-create-definer my-commenter-leader-key :prefix "SPC c")
-            (my-commenter-leader-key
-             :states 'motion
-             :keymaps 'override
-             "c" 'evilnc-copy-and-comment-lines
-             "i" 'evilnc-comment-or-uncomment-lines
-             "p" 'evilnc-comment-or-uncomment-paragraphs
-             "v" 'evilnc-toggle-invert-comment-line-by-line)))
 
 ;; Load settings made with Easy Customization Interface:
 
