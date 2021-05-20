@@ -22,6 +22,11 @@
 (setq inhibit-startup-screen t)
 (setq ring-bell-function 'ignore)
 
+;; Use some cool font:
+
+(when (display-graphic-p)
+  (set-frame-font "MonoLisa-16" nil t))
+
 ;; Make sure default encoding is UTF-8:
 
 (prefer-coding-system 'utf-8)
